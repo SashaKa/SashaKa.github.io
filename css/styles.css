@@ -24,11 +24,7 @@ body {
 }
 .menu__list {
   list-style: none;
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  .menu__list {
-    display: none;
-  }
+  display: none;
 }
 @media (min-width: 768px) and (max-width: 2219px) {
   .menu__list {
@@ -142,6 +138,45 @@ body {
     -webkit-transform: translateY(90deg);
     transform: translateY(90deg);
   }
+}
+input[type=radio] {
+  opacity: 0;
+}
+.switch-lang {
+  display: inline-block;
+  margin: 1rem 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding: 1rem;
+  background-color: #284a52;
+  border-radius: 7px;
+  -webkit-box-shadow: 2px 1px 0 0 #b0b881;
+  box-shadow: 2px 1px 0 0 #b0b881;
+}
+.switch-lang:hover {
+  color: #9da15e;
+}
+.switch-lang:checked {
+  color: #9da15e;
+}
+#english:checked ~ .about-wrapper .english {
+  display: block;
+}
+#english ~ .about-wrapper .english {
+  display: none;
+}
+#english:checked ~ .about-wrapper .russian {
+  display: none;
+}
+#russian:checked ~ .about-wrapper .russian {
+  display: block;
+}
+#russian ~ .about-wrapper .russian {
+  display: none;
+}
+#russian:checked ~ .about-wrapper .english {
+  display: none;
 }
 .main {
   padding: 2%;
@@ -287,7 +322,7 @@ body {
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .social-icons {
-    margin: 1rem;
+    margin: 0.5rem;
   }
 }
 .social-title {
@@ -301,13 +336,34 @@ body {
   height: 60px;
   cursor: pointer;
   margin: 0 auto;
+  position: relative;
 }
-.fa {
-  font-size: 5rem;
-  color: #d6e5ab;
+.social__icon {
+  font-size: 1rem;
+  position: absolute;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
 }
-.fa:hover {
-  color: #9da15e;
+.github {
+  background-position: -219px 1px;
+}
+.github:hover {
+  background-position: -219px -73px;
+}
+.twitter {
+  background-position: -147px -145px;
+}
+.twitter:hover {
+  background-position: -147px -218px;
+}
+.telegram {
+  background-position: -219px -143px;
+}
+.telegram:hover {
+  background-position: -219px -218px;
 }
 .about-wrapper {
   padding: 1rem;
