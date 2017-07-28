@@ -106,7 +106,7 @@ body {
   width: 70px;
   height: 70px;
   display: block;
-  background: url('../img/burger.svg') no-repeat center;
+  background: url('../img/menu-button.svg') no-repeat center;
   background-size: cover;
   cursor: pointer;
   position: relative;
