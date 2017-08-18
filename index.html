@@ -5,21 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/normalize.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="css/styles.css">
     <title>Sasha Coil</title>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-104881245-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
 </head>
 <body>  
     <div class="site-wrapper">
@@ -32,14 +19,17 @@
         </header>
         <main class="main">
             <section id="about"> 
+                <div class="about-block">
+                    <img src="img/photo-cv.jpg" alt="Саша Катушкова" class="about-photo">              
+                    <h2 class="about-hello">Hello!</h2> 
+                </div>
                 <label for="english" class="switch-lang">Eng</label>
                 <input type="radio" name="lang" id="english">
                 <label for="russian" class="switch-lang">Rus</label>
-                <input type="radio" name="lang" id="russian">  
-                <img src="img/photo-cv.jpg" alt="Саша Катушкова" class="about-photo">              
+                <input type="radio" name="lang" id="russian"> 
                 <div class="about-wrapper">
                     <div class="russian">
-                        <h1 class="about-header">Привет! Меня зовут Саша, я начинающий фронт-енд разработчик.</h1>
+                        <h1 class="about-header">Меня зовут Саша, я начинающий фронт-енд разработчик.</h1>
                         <p class="about-text">В конце 2016 года я начала изучать  верстку, заинтересовавшись веб-разработкой. Это оказалось очень интересным и затягивающим занятием.  
                         <p class="about-text">Сейчас у меня есть навыки адаптивной и кроссбраузерной верстки. Применяю Java Script для внедрения пользовательских удобностей, но в дальнейшем хочу освоить этот язык много глубже. В работе использую методологию БЭМ, препроцессор Less, собираю проекты с помощью Gulp. Эта страничка сделана уже с помощью grid раскладки. Код можно посмотреть на <a href="https://github.com/SashaKa/SashaKa.github.io" class="about-link">Github
                         </a>. Так же могу верстать адаптивные электронные письма. </p>
@@ -47,7 +37,7 @@
                         </p>
                     </div>
                     <div class="english">
-                        <h1 class="about-header">Hello! My name is Sasha, I'm a junior frontend developer.</h1>
+                        <h1 class="about-header">My name is Sasha, I'm a junior frontend developer.</h1>
                         <p class="about-text ">
                             At the end of 2016 I began to study CSS and HTML interested in web development. This turned out to be a very interesting and addictive work.</p>
                         <p class="about-text ">
