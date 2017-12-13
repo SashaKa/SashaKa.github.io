@@ -284,7 +284,11 @@ label[for='english'] {
   font-weight: 300;
   text-shadow: 1px 1px rgba(255, 0, 247, 0.84);
 }
+<<<<<<< HEAD
 .about-text, .about-item {
+=======
+.about-text {
+>>>>>>> d8c453552bc7d3ff27362536ef1d7c6918b8ca5a
   color: #d6e5ab;
   font-size: 1.2rem;
   line-height: 1.8;
@@ -415,9 +419,12 @@ label[for='english'] {
 .technical__skills {
   margin: 25px;
 }
+<<<<<<< HEAD
 .expirience__list li {
   list-style: none;
 }
 ul{
   padding-left: 0;
 }
+=======
+>>>>>>> d8c453552bc7d3ff27362536ef1d7c6918b8ca5a
