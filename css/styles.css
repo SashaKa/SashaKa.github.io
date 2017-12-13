@@ -284,11 +284,14 @@ label[for='english'] {
   font-weight: 300;
   text-shadow: 1px 1px rgba(255, 0, 247, 0.84);
 }
-.about-text {
+.about-text, .about-item {
   color: #d6e5ab;
   font-size: 1.2rem;
   line-height: 1.8;
   font-weight: 300;
+}
+.about-item {
+  list-style: none;
 }
 .about-header {
   font-weight: 500;
@@ -411,4 +414,10 @@ label[for='english'] {
 }
 .technical__skills {
   margin: 25px;
+}
+.expirience__list li {
+  list-style: none;
+}
+ul{
+  padding-left: 0;
 }
