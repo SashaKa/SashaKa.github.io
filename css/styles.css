@@ -423,11 +423,10 @@ label[for='english'] {
 }
 .technical__skills {
   margin: 25px;
-  
 }
 .technical__skill {
-position: relative;
-font-size: 18px;
+  position: relative;
+  font-size: 18px;
 }
 .technical__skill::before {
   position: absolute;
@@ -435,16 +434,15 @@ font-size: 18px;
   background-color: #9ca15d;
   width: 15px;
   height: 15px;
-  border-radius: 50%;    
+  border-radius: 50%;
   left: -23px;
-    top: 5px;
+  top: 5px;
 }
 .item__year {
   position: relative;
   margin-left: 30px;
 }
-.item__year::before
- {
+.item__year::before {
   position: absolute;
   content: '';
   background-color: #9ca15d;
