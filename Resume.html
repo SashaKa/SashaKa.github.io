@@ -1,0 +1,577 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resume</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="cd5ebdf4-c91b-4eac-80cf-3439b4028656" class="page sans"><header><h1 class="page-title">Resume</h1></header><div class="page-body"><p id="4d2c84fc-7bf2-4d54-9d11-ff63120e72ff" class="">
+</p><h3 id="bce11584-a7fa-4e97-842e-b33652bfa4ac" class=""><strong>Aleksandra Katushkova</strong></h3><p id="5b1f65e6-ef41-4bb8-8f81-471fb4bde7f0" class="">
+</p><p id="7469b1c9-3bba-4d7e-8645-e43a3fb94d1c" class="">Address: Saint Petersburg</p><p id="47bf2a09-f283-4491-98cf-425f6b06c0bb" class="">Phone: +79006378743</p><p id="7dfd91ce-b0b0-4850-b096-469da2744413" class="">Email: katushkovasa@gmail.com</p><p id="94ea69b0-897f-41d8-a381-aa9d016376c1" class="">Github: <a href="https://github.com/SashaKa/SashaKa.github.io">https://github.com/SashaKa</a>/<a href="http://sashaka.github.io/">SashaKa.github.io</a></p><hr id="459e67dd-4be3-4a23-a0ae-ba7ddc314bdb"/><h3 id="a81b6d03-e14f-4073-abaf-bdcc4aaf7817" class="">Objective</h3><p id="35dd7468-b819-4174-81a9-8f1ad56a4fd3" class="">I have experience in Manual Testing for Software Quality Assurance (SQA). I am driven and committed to develop test plans and strategies that will uphold the high standards of quality your products are known for. I am focused on development automated testing. I have strong foundation in HTML, CSS, JavaScript, basic familiarity with Python. </p><hr id="e72f75e9-09ec-4ed5-bd6e-bf6612795ca1"/><h3 id="5e50a582-505d-4932-a841-bd98e845fd62" class="">Skills </h3><ul id="b1430360-9806-4728-a8d3-e1ef24caa644" class="bulleted-list"><li>SQA Tools &amp; Best Practices</li></ul><ul id="9e370a7d-19d5-4dee-9325-718176455d77" class="bulleted-list"><li>Knowledge of bug tracking tools such as Atlassian and Jira</li></ul><ul id="88a1f788-b09f-4df8-a42c-4fda17ba20fb" class="bulleted-list"><li>Defect &amp; Bug Discovery</li></ul><ul id="c7b31f66-13ef-4fea-9d19-7793e234069d" class="bulleted-list"><li>Issue Identification</li></ul><ul id="4ad1c2da-28e4-4c00-99ac-a66288edc93b" class="bulleted-list"><li>Knowledge SQL </li></ul><ul id="247a4f2e-85a0-496b-bee2-a7ed21412440" class="bulleted-list"><li>Knowledge REST API, familiar with SOAP</li></ul><ul id="5a3f71b9-f89a-4987-828e-46f54624d21c" class="bulleted-list"><li>Technical Specification Analysis</li></ul><ul id="1d57a9d9-4c95-4bd5-b989-9d5679e44114" class="bulleted-list"><li>Regression Testing</li></ul><ul id="94ec140e-c8c9-42e7-9b47-ee2cffc4af3d" class="bulleted-list"><li>Load Testing</li></ul><ul id="f143a127-abc3-4f7c-8ce4-e382a5ca8280" class="bulleted-list"><li>Tracking, Logging &amp; Reporting</li></ul><ul id="bdc4046e-013c-4e9d-8038-14b3d355f6ae" class="bulleted-list"><li>Software Architecture Technologies</li></ul><ul id="55b56f71-46e8-4427-8d88-ac01cadda088" class="bulleted-list"><li>Strong Communication skills</li></ul><ul id="d7402aaf-1ce2-45aa-9f03-604d8cd57d07" class="bulleted-list"><li>Аttention to detail</li></ul><ul id="073f42e1-a0db-42b7-a80e-ca061bdfe827" class="bulleted-list"><li>Team oriented</li></ul><hr id="a442576f-72ef-4568-aff9-88b1ab1097cb"/><h3 id="c2891745-09f9-4a2d-8acf-cc7adb058add" class="">Work Experience</h3><p id="6771d448-a53b-4dff-a4b4-7dc0ceace76f" class=""><strong>Manager of frontend education courses </strong></p><p id="009b7f8d-97c9-4ae4-b81d-de3917b5a009" class="">12/2017 - 07/2019<strong>
+</strong>HTML Academy, Saint-Petersburg</p><p id="2f616232-0fa1-4bcd-81ce-7cd7365b9dfc" class=""><strong>Duties and Responsibilities</strong></p><ul id="43e8d09e-b246-42e2-bc17-58cdcfec92ca" class="bulleted-list"><li>Managed full projects life cycle for more then 800 clients and ensured quality deliveries.</li></ul><ul id="184f046f-2ca5-4ce5-a482-0fe5931af446" class="bulleted-list"><li>Actively listened to client objectives and concerns to maximize satisfaction.</li></ul><ul id="22a47c6d-9be5-4207-8a34-1dec42212705" class="bulleted-list"><li>Maintained customer loyalty to guarantee continued business growth.</li></ul><ul id="41a456f1-6dbf-473f-8d5e-765bb1f96cee" class="bulleted-list"><li>Coordinated with development and other teams to maintain schedules.</li></ul><ul id="01b7ff71-89e3-4fb1-82e4-728bac753857" class="bulleted-list"><li>Identified and reported bugs, errors and other issues within proprietary software application developed for HTML Academy user base.</li></ul><ul id="1892abd9-4147-406f-ac5b-48a56ce5cd15" class="bulleted-list"><li>Worked collaboratively with development and business group before start new releases.</li></ul><ul id="c347ee38-1c4e-46c0-bb0f-05675118967e" class="bulleted-list"><li>Onboarding of new employees.</li></ul><ul id="558de8f0-6a48-4f05-880b-dc72a9108906" class="bulleted-list"><li>Мonitoring and interview of new mentors.</li></ul><ul id="8970097d-3749-49ac-827e-74164d583a48" class="block-color-gray bulleted-list"><li>Recognized for excellent problem-solving and analytical skills by project manager and supervisors.</li></ul><ul id="ff0a2810-46a4-4eb1-bb08-e55a230cb4ef" class="block-color-gray bulleted-list"><li>Demonstrated methodical, detail-oriented and thorough approach to all assignments while adhering to compressed timelines. Complete all assignments on or ahead of schedule. </li></ul><p id="2727dd88-cfee-4083-8993-563e3b1048bd" class="">
+</p><p id="cfe1d297-d57d-4523-be48-65851b3fdd19" class=""><strong>Frontend Developer,</strong> 12/2016 to 11/2019</p><p id="b10e15f3-5e56-4956-ab50-1fe42bd824a9" class="">Freelance, пасеканазаровых.рф, Saint-Petersburg</p><p id="ec2c8088-d4a0-4042-ad63-8754d21b60e1" class=""><strong>Duties and Responsibilities</strong></p><ul id="4774571f-a696-43f2-977c-bd6581fad205" class="bulleted-list"><li>Creating and support a site for family business</li></ul><ul id="8842d94c-8b12-44da-8ede-38f04007a855" class="bulleted-list"><li>Control WordPress plugins</li></ul><ul id="122d2965-4e30-4ac4-8074-8b723dac7824" class="bulleted-list"><li>Experience with HTML, JavaScript, CSS</li></ul><ul id="a386bed0-789d-4878-acb5-8748a5f2098b" class="bulleted-list"><li>Knowledge of SEO principles</li></ul><ul id="960c3f37-e246-4929-8e70-8767c93ee9ad" class="bulleted-list"><li>Working with Social networks, storytelling</li></ul><p id="d2a6ef34-8755-40dc-b7bc-11becb056d06" class="">
+</p><p id="3f48d61d-0233-43c0-9c24-c0bf163d58fc" class=""><strong>Technical Support, </strong>07/2017 to 07/2018</p><p id="1052c10f-6168-4347-8dd8-63a7ef759344" class="">Autonomous Nonprofit Organisation «Proekzia», Saint-Petersburg</p><p id="1b6b0dd9-ca5a-4022-afef-afab9a03b759" class=""><strong>Duties and Responsibilities</strong></p><ul id="f14b49c2-35cf-43b5-954e-d2a24c7ba09d" class="bulleted-list"><li>Development Educational vocational quidance service</li></ul><ul id="c75e6b19-c4df-4dc0-96b6-c23452d2aa77" class="bulleted-list"><li>Technical support and advice</li></ul><ul id="086aa9bb-4fcf-4062-810a-da2cc6c13753" class="bulleted-list"><li>Financial model calculation</li></ul><p id="8fe84a11-cf1b-4ae5-bebe-cdd14e314fe4" class="">
+</p><p id="98c2d4eb-b8bb-4deb-8c17-12031a3ccb65" class=""><strong>Health Food Store Administrator</strong>, 9/2015 - 10/2016</p><p id="d70c475d-a35f-493e-9d9f-8b0dfdc49b7a" class="">Fundukshop.ru, Saint-Petersburg</p><p id="56ce1929-8fb2-462c-b9c5-e693b216f6ed" class=""><strong>Duties and Responsibilities</strong></p><ul id="d905e6d2-3671-4d41-8bdb-db19982ab594" class="bulleted-list"><li>Provide customer assistance</li></ul><ul id="0ae04618-884d-4c8a-8046-b885a81155b5" class="bulleted-list"><li>Training of new employees.</li></ul><ul id="0073d84d-0b75-43fe-a22e-176d7055a09d" class="bulleted-list"><li>Monitor inventory</li></ul><ul id="05918663-84cc-49c1-a234-74fa64126443" class="bulleted-list"><li>Make performance assessments of employees and sales</li></ul><p id="b8b5ad65-b379-49a7-a6b6-5328f08886f7" class="block-color-purple">
+</p><p id="f013e59a-e989-4e93-b385-b8e9880ba50b" class=""><strong>Сo-founder and Manager Chinese Tea club and shop, </strong>2011-2015</p><p id="9f7fe015-08a9-4709-9d7f-1b60f36ac639" class="">Chaku, teaeast.ru, Kaluga</p><p id="8a4a5c96-1e3d-40d8-9edc-1143f9862e39" class=""><strong>Duties and Responsibilities</strong></p><ul id="0a4651a2-cd8b-4e48-876a-de7a22c489d4" class="bulleted-list"><li>Played key role in boosting profitability</li></ul><ul id="20632e08-7454-4b97-8fda-b196f39136ef" class="bulleted-list"><li>Monitoring and training of employees</li></ul><p id="f784588d-849f-475b-84ac-789edf5ac35b" class="">
+</p><p id="20e41034-5a38-4f90-b358-c0e0b9ab1f75" class=""><strong>EDUCATION &amp; CREDENTIALS</strong></p><p id="199c4a0a-6923-4cbe-bcd3-020d9bbac10b" class="">
+</p><p id="8827c05b-44b6-4ac0-8f2c-0cefbc50e7d4" class=""><strong>ITMO University, </strong>2017</p><p id="5468783f-7da4-4450-bbaa-378fb3276a63" class="">Tailor-made Acceleration Program Girls4Tech</p><p id="973d72c9-7c68-467f-a2fa-9224aa371662" class=""><strong>HTML Academy, </strong>2017</p><p id="ddd69f86-69c0-4b44-bebf-6c287f91b484" class="">HTML, CSS, JavaScript Courses</p><p id="4b16f347-265c-4a1b-8e51-fe34f6d261bf" class=""><strong>Saint-Petersburg State University of Culture and Arts, 2011</strong>
+Library science</p><p id="b3029cf6-99ba-4b60-8956-582100464c2b" class="">
+</p><hr id="ccddbb52-8633-4367-a720-5ba90a947865"/><p id="fabce460-25a2-4459-b51f-4c696abae16d" class="">I am interested in the field of biotechnologies, agrotechnologies, recycling, ecology. I lead a healthy lifestyle.</p><p id="fa47ad87-13db-4d9a-8cc8-a20f7c0bacf1" class="">
+</p></div></article></body></html>
